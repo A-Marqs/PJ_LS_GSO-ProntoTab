@@ -1,4 +1,4 @@
-# PJ_LS_GSO-ProtoTab
+# PJ_LS_GSO-ProntoTab
 Project of a web page, in a linux server, for the GSO classes.
 
 Dev's:
