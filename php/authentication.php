@@ -17,7 +17,7 @@
     	session_start();
     	echo "Login feito com sucesso.";
     	$_SESSION['main'] = true;
-    	header ('location: main.html');
+    	header ('location: ./main.html');
     }
     else
     {
