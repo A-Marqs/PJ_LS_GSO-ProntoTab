@@ -17,13 +17,13 @@
     	session_start();
     	echo "Login feito com sucesso.";
     	$_SESSION['main'] = true;
-    	header ('location: main.html');
+    	header ('location: ./main.html');
     }
     else
     {
 
         echo "<script language='javascript' type='text/javascript'>
-        alert('Senha ou Usuário incorreto'); window.location.href='Index.html'; </script>";
+        alert('Senha ou Usuário incorreto'); window.location.href='./index.html'; </script>";
 
     	//echo 'Senha ou Usuário errado.';
         //break;
