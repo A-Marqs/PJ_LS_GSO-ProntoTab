@@ -2,7 +2,7 @@
 
     $usuario = $_POST['user_name'];
 
-    $senha = $_POST['passsword'];
+    $senha = $_POST['password'];
 
 
     $senhaAdm = '12345';
