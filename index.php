@@ -7,6 +7,14 @@
 
     <link href="./styles/main.css" rel="stylesheet"> <!--Estilo CSS-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> <!-- Fonte Principal -->
+    <link href="/scripts/login_action.js">
+
+    <script>
+        function teste() { 
+            console.log("teste");
+        }
+    </script>
+
 </head>
 <body>
     <h1>ProntoTab</h1>
@@ -26,9 +34,13 @@
         </div>
 
         <!--Autenticação de Login-->
+<<<<<<< Updated upstream:index.php
         <form id="form" method="post" action="./php/authentication.php">
             <button type="submit"> Fazer Login </button>    
         </form>
+=======
+        <button id="entrar" onclick="teste()"> Entrar</button>
+>>>>>>> Stashed changes:index.html
     </div>
 
 </body>
