@@ -6,7 +6,7 @@
     }
   else
   {
-  	header('location: ./prontotab.php');
+  	header('location: prontotab.php');
   }
 
 ?>

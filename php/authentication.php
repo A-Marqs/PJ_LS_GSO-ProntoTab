@@ -13,7 +13,7 @@
         echo "
         <script language='javascript' type='text/javascript'>
         window.alert('Seja bem-vind@'); 
-        window.location.href='./php/main.php'; 
+        window.location.href='../prontotab.php'; 
         </script>";
     }
     else

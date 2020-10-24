@@ -20,27 +20,22 @@
     <h1>ProntoTab</h1>
 
     <div id="login_form">
-        <!--Usuário-->
-        <div>
-            <label for="user_name"> Usuário: </label>
-            <input type="text" id="user_name" />
-
-        </div>
-
-        <!--Senha-->
-        <div>
-            <label for="password"> Senha: </label>
-            <input type="text" id="password" />
-        </div>
-
-        <!--Autenticação de Login-->
-<<<<<<< Updated upstream:index.php
         <form id="form" method="post" action="./php/authentication.php">
+            <!--Usuário-->
+            <div>
+                <label for="user_name"> Usuário: </label>
+                <input type="text" id="user_name" name="user_name"/>
+            </div>
+
+            <!--Senha-->
+            <div>
+                <label for="password"> Senha: </label>
+                <input type="text" id="password" name="password"/>
+            </div>
+
+            <!--Autenticação de Login-->
             <button type="submit"> Fazer Login </button>    
         </form>
-=======
-        <button id="entrar" onclick="teste()"> Entrar</button>
->>>>>>> Stashed changes:index.html
     </div>
 
 </body>
