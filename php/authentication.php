@@ -1,39 +1,26 @@
 <?php
 
-    $usuario = $_POST['user_name'];
+    $user = $_POST['user_name'];
+    $pass = $_POST['password'];
+    
+    $rootPass = '12345';
+    $rootUser = 'root';
 
-    $senha = $_POST['password'];
-
-
-    $senhaAdm = '12345';
-    $usuarioAdm = 'root';
-
-
-    $$usuario = 'Adm';
-
-
-    if ($senha == $senhaAdm && $usuarioAdm == $usuarioAdm)
+    if ($user == $rootUser && $pass == $rootPass)
     {
     	session_start();
-    	echo "Login feito com sucesso.";
     	$_SESSION['main'] = true;
-    	header ('location: main.php');
+        echo "
+        <script language='javascript' type='text/javascript'>
+        window.alert('Seja bem-vind@'); 
+        window.location.href='./php/main.php'; 
+        </script>";
     }
     else
     {
-
         echo "<script language='javascript' type='text/javascript'>
-        alert('Senha ou Usuário incorreto'); window.location.href='../index.php'; </script>";
-
-    	//echo 'Senha ou Usuário errado.';
-        //break;
+        window.alert('Usuário e/ou senha incorretos'); 
+        window.location.href='index.php'; 
+        </script>";
     }
-    
-    	//header('location: index.php');
-    
-
-
-
-
-
 ?>
