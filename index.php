@@ -26,7 +26,7 @@
         </div>
 
         <!--Autenticação de Login-->
-        <form action="./php/authentication.php">
+        <form id="form" method="post" action="./php/authentication.php">
             <button type="submit"> Fazer Login </button>    
         </form>
     </div>
