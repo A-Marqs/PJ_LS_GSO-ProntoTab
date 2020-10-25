@@ -1,4 +1,60 @@
-* {
-    background-color: black;
+:root{
+
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 26px;
+}
+
+h1{
+    font-family: Roboto;
+    font-size: 68px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo_box{
+    margin-right: 100px;
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+.login_form{
+    font-family: Oswald;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+    border: 3px solid #ffffff;
+    border-radius: 10px 0px 10px 0px;
+    box-sizing: border-box;
     
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 6s;
+}
+
+.login_form button{
+    width: 100%;
+    border: 2px solid #ffffff;
+    font-family: Oswald;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
