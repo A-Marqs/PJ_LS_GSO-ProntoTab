@@ -1,18 +1,18 @@
 <?php
 
-    $user = $_POST['user_name'];
-    $pass = $_POST['password'];
+    $user = $_POST['user_name']; // Pega o nome do usuário
+    $pass = $_POST['password'];  // Pega a senha do usuário
     
-    $rootPass = '12345';
-    $rootUser = 'root';
+    $testeUser = 'testes'; // Usuário de testes
+    $testePass = '12345';  // Senha do usuário de testes 
 
-    if ($user == $rootUser && $pass == $rootPass)
+    if ($user == $testeUser && $pass == $testePass)
     {
     	session_start();
     	$_SESSION['main'] = true;
         echo "
         <script language='javascript' type='text/javascript'>
-        window.alert('Seja bem-vind@'); 
+        window.alert('Logado como: usuário de testes!'); 
         window.location.href='../prontotab.php'; 
         </script>";
     }
@@ -20,7 +20,7 @@
     {
         echo "<script language='javascript' type='text/javascript'>
         window.alert('Usuário e/ou senha incorretos'); 
-        window.location.href='index.php'; 
+        window.location.href='../index.php'; 
         </script>";
     }
 ?>

@@ -1,9 +1,10 @@
 :root{
-
     background-color: #000000;
     color: #ffffff;
     font-family: Arial;
     font-size: 26px;
+    margin: 0px;
+    padding: 0px;
 }
 
 h1{
@@ -57,4 +58,11 @@ h1{
 @keyframes fadeIn{
     0%{opacity: 0;}
     100%{opacity: 1;}
+}
+
+@media (min-width:320vh)and(min-height:568vh) {
+    .logo_box{
+        margin-top: 100px;
+        
+    }
 }

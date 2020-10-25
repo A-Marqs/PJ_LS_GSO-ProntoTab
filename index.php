@@ -28,7 +28,7 @@
                 <!--Senha-->
                 <div class="pass">
                     <label for="password">senha:</label>
-                    <input type="text" id="password" name="password"/>
+                    <input type="password" id="password" name="password"/>
                 </div>
 
                 <!--Autenticação de Login-->
