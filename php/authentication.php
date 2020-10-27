@@ -2,13 +2,13 @@
 
     $user = $_POST['user_name']; // Pega o nome do usuário
     $pass = $_POST['password'];  // Pega a senha do usuário
-    $userdata = $_POST['userdata'];
+    $userdatas = $_POST['userdata'];
 
     //Conectar com Banco de Dados:
     $connect = mysql_connect('localhost:3306', 'root', 'Prontotab@2020');
     $db = mysql_connect('users');
 
-    if (isset($userdata)){
+    if (isset($userdatas)){
         $verifica = mysql_query("SELECT * FROM usuarios WHERE login =
         '$user' AND senha = '$pass'") or die("erro ao selecionar");
 
