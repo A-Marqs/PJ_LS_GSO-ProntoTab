@@ -1,19 +1,19 @@
 <?php
     class Conexao {
-       private $data = array () ;
+       private $userdatas = array () ;
        //variavel da classe Base
        protected $pdo = null ;
 
-       public function __set ($name , $value) {
-          $this->data[$name] = $value;
+       public function __set ($user , $pass) {
+          $this->data[$user] = $pass;
        }
-      public function __get($name) {
-        if (array_key_exists($name, $this->data)) {
-          return $this->data[$name] ;
+      public function __get($user) {
+        if (array_key_exists($user, $this->data)) {
+          return $this->data[$user] ;
         }
         $trace = debug_backtrace () ;
         trigger_error(
-           'Undefined property via __get () : ' . $name .
+           'Undefined property via __get () : ' . $user .
            ' in ' .$trace[0] ['file'] .
            ' on line ' . $trace[0] ['file']
            E_USER_NOTICE) ;
@@ -30,11 +30,11 @@
         }
 
         //método que conecta com o banco de dados
-        public function conecatr() {
+        public function conectar() {
             try{
-                $this->pdo = new PDO("mysql:host=localhost;dbname=postlogin" ,
+                $this->pdo = new PDO("mysql:host=localhost;dbname=usuarios" ,
                               "root" ,
-                              " " ,
+                              "Prontotab@2020" ,
                               array (PDO : :MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" )) ;
             }catch (PDOException $e) {
                 print "Error! : " . $e->getMessage() , "<br/>" ;
