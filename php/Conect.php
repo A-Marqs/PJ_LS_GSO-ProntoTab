@@ -10,13 +10,13 @@ session_start();
 global $pdo;
 
 		//conect db
-		try{
+//		try{
 			$pdo = new PDO("mysql:dbname=".$db."host=".$localhost, $sqluser, $sqlpass) ;
 			$pdo->setAttribute(PDO: :ATTR_ERRMODE, PDO: :ERRMODE_EXCEPTION);
-		}catch (PDOException $e){
-			echo "Error: ".$e->getMessage();
-			exit;
-		}
+//		}catch (PDOException $e){
+//			echo "Error: ".$e->getMessage();
+//			exit;
+//		}
 	
 ?>
 
