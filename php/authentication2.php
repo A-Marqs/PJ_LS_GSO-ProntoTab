@@ -40,16 +40,25 @@ class Conexao {
 			}
 		}
 
-		//método que desconecta
-		public function desconectar() {
-			$this->pdo = null;
-		}
-		public function select($sql) {
-			$stmt = $this->pdo->prepare($sql) ;
-			$stmt->is_execute() ;
-			return $stmt->fetchAll(PDO: :FETCH_ASSOC) ;
-		}
-	}
-//conexao com o banco de dados, tabela e coluna
+		if (isset($userdatas)){
+			$verifica = mysql_query("SELECT * FROM usuarios WHERE user =
+				'$user' AND pass = '$pass'") or die("erro ao selecionar");
+
+        if (mysql_num_rows($verifica)<=0){
+            echo"<script language='javascript' type='text/javascript'>
+            alert('Login e/ou senha incorretos');window.location
+            .href='../index.php';</script>";
+            die();
+        } else{
+            setcookie("login",$user);
+            echo "
+            <script language='javascript' type='text/javascript'>
+            window.alert('Logado como: usuário de testes!'); 
+            window.location.href='../prontotab.php'; 
+            </script>";
+        }
+
+    }
 ?>
+
 
