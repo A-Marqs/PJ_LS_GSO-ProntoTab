@@ -1,0 +1,54 @@
+<?php
+	
+
+    $localhost = "localhost";
+    $sqluser = "Admin";
+	$sqlpass = "Prontotab@2020";
+	$db = "ProntoTab";
+	$dbuser "usuarios";
+
+
+	//verifica
+	if isset($_POST['user_name']) && !empty($_POST['user_name']) &&
+	 isset($_POST['password']) && !empty($_POST['password']){
+
+		//conect db
+		try{
+			$this->pdo = new PDO("mysql:host=".$localhost.";dbname=".$db, $sqluser, $sqlpass ;) ;
+		}catch (PDOException $e) {
+			print "Error! : " . $e->getMessage() , "<br/>" ;
+			die() ;
+		}
+
+		//select dbtab
+		$stmt = $this->pdo->prepare($dbtab) ;
+		$stmt->is_execute() ;
+		return $stmt->fetchAll(PDO: :FETCH_ASSOC) ;
+
+		$user = addslashes($_POST['user_name']);
+		$pass = addslashes($_POST['password']);
+
+		
+	}else{
+
+		header("../index.php")
+	}
+
+
+	//conect db
+    try{
+		$this->pdo = new PDO("mysql:host=".$localhost.";dbname=".$db, $dbuser, $dbpass ;
+			array (PDO : :MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" )) ;
+	}catch (PDOException $e) {
+		print "Error! : " . $e->getMessage() , "<br/>" ;
+		die() ;
+	}
+	
+	//select dbtab
+    $stmt = $this->pdo->prepare($sql) ;
+    $stmt->is_execute() ;
+	return $stmt->fetchAll(PDO: :FETCH_ASSOC) ;
+	
+?>
+
+
