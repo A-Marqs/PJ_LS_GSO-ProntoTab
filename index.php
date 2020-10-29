@@ -18,7 +18,7 @@
 
         <!--Formulário de Login-->
         <div class="login_form">
-            <form id="userdata" method="post" action="prontotab.php">
+            <form id="userdata" method="post" action="logar.php">
                 <!--Usuário-->
                 <div class="user">
                     <label>usuário:</label>
