@@ -9,7 +9,7 @@ Class Usuario{
         $sql = "SELECT * FROM usuarios WHERE user = :user AND pass = :pass";
         $sql = $pdo->prepare($sql);
         $sql->bindValue("user" , $user);
-        $sql->bindValue("pass" , md5$pass);
+        $sql->bindValue("pass" , md5($pass));
         $sql->Execute();
 
         if($sql-> rowCount() > 0){

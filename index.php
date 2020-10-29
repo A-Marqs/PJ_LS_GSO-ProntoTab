@@ -21,14 +21,14 @@
             <form id="userdata" method="post" action="./php/Conect.php">
                 <!--Usuário-->
                 <div class="user">
-                    <label for="user_name">usuário:</label>
-                    <input type="text" id="user_name" name="user_name" placeholder="Digite seu usuário" required/>
+                    <label>usuário:</label>
+                    <input type="text" name="user" placeholder="Digite seu usuário" required/>
                 </div>
 
                 <!--Senha-->
                 <div class="pass">
                     <label>senha:</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required/>
+                    <input type="password" name="pass" placeholder="Digite sua senha" required/>
                 </div>
 
                 <!--Autenticação de Login-->
