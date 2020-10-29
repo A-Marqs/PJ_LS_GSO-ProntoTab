@@ -6,16 +6,16 @@
 
     //Conectar com Banco de Dados:
     $connect = mysql_connect('localhost:3306', 'root', 'Prontotab@2020');
-    $db = mysql_connect('users');
+    $db = mysql_connect('usuarios');
 
     if (isset($userdatas)){
-        $verifica = mysql_query("SELECT * FROM usuarios WHERE login =
-        '$user' AND senha = '$pass'") or die("erro ao selecionar");
+        $verifica = mysql_query("SELECT * FROM usuarios WHERE user =
+        '$user' AND pass = '$pass'") or die("erro ao selecionar");
 
         if (mysql_num_rows($verifica)<=0){
             echo"<script language='javascript' type='text/javascript'>
             alert('Login e/ou senha incorretos');window.location
-            .href='login.html';</script>";
+            .href='../index.php';</script>";
             die();
         } else{
             setcookie("login",$user);
