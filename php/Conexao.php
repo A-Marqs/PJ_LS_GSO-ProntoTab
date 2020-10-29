@@ -32,7 +32,7 @@
         //método que conecta com o banco de dados
         public function conectar() {
             try{
-                $this->pdo = new PDO("mysql:host=localhost;dbname=usuarios",
+                $this->pdo = new PDO("mysql:host=localhost;dbname=usuarios" ,
                               "root" ,
                               "Prontotab@2020" ,
                               array (PDO : :MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8" )) ;
