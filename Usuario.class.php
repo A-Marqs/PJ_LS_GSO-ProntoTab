@@ -7,7 +7,6 @@ Class Usuario{
         global $pdo;
         global $elog;
     
-        try{
             $sql = "SELECT * FROM usuarios WHERE user = :user AND pass = :pass";
             $sql = $pdo->prepare($sql);
             $sql->bindValue("user" , $user);
@@ -21,12 +20,9 @@ Class Usuario{
 
                 return true;
             }else{
-                $sql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return false;
             }
-        }catch (PDOException $elog){
-            exit;
-        }
+      
     }
 }
 

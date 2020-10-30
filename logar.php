@@ -17,7 +17,9 @@ $u = new Usuario();
                 header("Location: prontotab.php");
             }
         } else {
-            echo ("<script> window.alert('$elog'); </script> ");
+            echo "<script language='javascript' type='text/javascript'>
+                    window.alert('Login e/ou senha incorretos');
+                    window.location.href='login.html';</script>";
             header ("location: index.php");
           }
         
