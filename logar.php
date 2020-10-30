@@ -13,14 +13,14 @@ $u = new Usuario();
 
         if($u->login($user , $pass) == true){
             if(isset($_SESSION['iduser'])){
-                header("Location: prontotab.php");
-            }else{
                 header("Location: index.php");
+            }else{
+                header("Location: prontotab.php");
             }
         }
         
 	}else{
-
+        echo ("<script> window.alert('Erro de usuário ou senha'); </script>");
 		header ("location: index.php");
 	}
 	
