@@ -12,6 +12,10 @@ h1{
     font-size: 68px;
 }
 
+p{
+    font-family: Oswald;
+    font-size: 48px;
+}
 .container{
     display: flex;
     align-items: center;
