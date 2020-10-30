@@ -10,7 +10,7 @@ Class Usuario{
         $sql = $pdo->prepare($sql);
         $sql->bindValue("user" , $user);
         $sql->bindValue("pass" , md5($pass));
-        $sql->Execute();
+        $sql->execute();
 
         if($sql-> rowCount() > 0){
             $dado = $sql->fetch();
