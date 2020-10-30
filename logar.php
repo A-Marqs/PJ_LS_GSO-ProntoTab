@@ -17,10 +17,9 @@ $u = new Usuario();
             }else{
                 header("Location: prontotab.php");
             }
-        }
+        } else{echo ("<script> window.alert('Erro de usuário ou senha'); </script>");}
         
 	}else{
-        echo ("<script> window.alert('Erro de usuário ou senha'); </script>");
 		header ("location: index.php");
 	}
 	
