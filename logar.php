@@ -17,7 +17,7 @@ $u = new Usuario();
                 header("Location: prontotab.php");
             }
         } else {
-            echo "Error: ".$elog->getMessage();
+            echo ("<script> window.alert('$elog'); </script> ");
             header ("location: index.php");
           }
         
